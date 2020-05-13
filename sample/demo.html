@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas擦除特效</title>
+	<style>
+		html,body{
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		#cas {
+			border: 1px solid #000;
+			background: url(images/wipe1.jpg) center center;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="cas" width="375" height="667"></canvas>
+</body>
+</html>
+<script src="js/swipe-daguo-1.2.3.min.js"></script>
+<script type="text/javascript">
+	var obj = {
+		id: "cas", //canvas标签的id
+		_w: "375", //canvas的宽
+		_h: "667", //高度
+		radius: "20", //擦除圆点的半径
+		coverType: "img", //canvas的覆盖类型，可以有两种取值img或color，img则需在mask中指定图片的路径，如果是color则需在mask中给出颜色值，可以使字符串或十六进制或rgb()格式
+		mask: "images/wipe2.jpg",
+		percent: 50, //当透明面积超过此处指定的数字，则提示擦除完成
+		callback:wancheng//用户自定义回调函数名称
+	}
+	
+	var swipe1 = new Swipe(obj);
+	function wancheng(transPercent){
+		//transPercent为透明面积占总面积的百分比
+		//擦除完成后，用户自己的逻辑
+		if(transPercent>50){
+			alert("擦除完成，查看中奖结果");
+		}
+	}
+</script>

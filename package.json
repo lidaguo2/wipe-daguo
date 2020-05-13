@@ -1,0 +1,27 @@
+{
+  "name": "swipe-daguo",
+  "version": "1.2.3",
+  "description": "canvas擦除组件，支持移动的手势操作，丰富的参数配置",
+  "main": "GruntFile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "canvas",
+    "swipe",
+    "touch"
+  ],
+  "author": "daguo",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.1.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-text-replace": "^0.4.0"
+  }
+}
